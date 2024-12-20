@@ -1,0 +1,72 @@
+body{
+  padding:50px;
+  min-height: 1000px;
+  height: auto;
+}
+
+body h2{
+  text-align: center;
+}
+.faqlist-box {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Add space between FAQ items */
+  padding: 20px; /* Add padding around the list */
+  background: #f9f9f9;
+  
+}
+
+.faq-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.faq-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background:rgb(255, 247, 225);
+}
+
+.faq-ques {
+  display: flex; /* Flexbox to align items horizontally */
+  align-items: center; /* Vertically align arrow and text */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  margin-right: 10px; /* Space between arrow and question */
+  font-size: 20px; /* Slightly larger size for the arrow */
+  color: #888; /* Softer color for the arrow */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth rotation animation */
+}
+.arrow.active{
+  transform: rotate(90deg);
+}
+
+.faq-ans {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .faqlist-box {
+    padding: 15px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce spacing between items */
+  }
+
+  .faq-item {
+    font-size: 14px; /* Slightly smaller text for smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+}
